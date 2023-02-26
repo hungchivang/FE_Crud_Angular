@@ -1,0 +1,24 @@
+
+<div class="container-full" style="margin: 0px 150px">
+  <h2>Web sale</h2>
+  <p>The w3-table class defines a basic table:</p>
+    <table class="table table-striped">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let p of products">
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.price}}</td>
+      <td><img src="{{p.image}}" width="300" height="200"></td>
+      <td><button type="button" class="btn btn-warning" routerLink="/edit/{{p.id}}" >Edit</button></td>
+      <td><button type="button" class="btn btn-danger" routerLink="/delete/{{p.id}}" style="color: darkgreen">Delete</button></td>
+    </tr>
+  </table>
+</div>
+
+
